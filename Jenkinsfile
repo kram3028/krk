@@ -18,5 +18,11 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        build(job: 'war', quietPeriod: 20, wait: true)
+      }
+    }
+
   }
 }
