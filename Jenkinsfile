@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         build(job: 'war', quietPeriod: 20, wait: true)
+        bat 'mvn clean package'
       }
     }
 
